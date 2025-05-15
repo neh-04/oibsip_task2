@@ -1,0 +1,55 @@
+import pandas as pd
+
+# Sample email dataset
+emails = [
+    ("Congratulations! You've won a lottery worth $1,000,000. Click here to claim your prize.", "spam"),
+    ("Your bank account needs verification. Click the link to proceed.", "spam"),
+    ("Limited-time offer! Get 70% off on our latest gadgets. Buy now!", "spam"),
+    ("Earn money from home easily! No experience needed, sign up today!", "spam"),
+    ("You've been selected for a free gift card. Claim it now!", "spam"),
+    ("Urgent: Your PayPal account has been suspended. Click to reactivate.", "spam"),
+    ("Dear user, upgrade your Netflix subscription at no cost! Act fast.", "spam"),
+    ("Last chance! Get an exclusive discount on your favorite brands.", "spam"),
+    ("Act now to receive free health supplements! Limited stocks available.", "spam"),
+    ("Your PC is infected! Download this software immediately for protection.", "spam"),
+    ("Win a free vacation to Hawaii! Just complete this short survey.", "spam"),
+    ("You've inherited a fortune! Contact us for details.", "spam"),
+    ("Get 100,000 followers instantly with our exclusive social media package!", "spam"),
+    ("Congratulations! You’re our lucky winner. Claim your reward now!", "spam"),
+    ("Boost your website traffic with guaranteed results. Try for free!", "spam"),
+    ("Hello, this is your electricity provider. Update your billing details now!", "spam"),
+    ("Invest in cryptocurrency today and double your money overnight!", "spam"),
+    ("Flash sale! Buy 1 get 1 free on all products. Hurry up!", "spam"),
+    ("Your Amazon account has unusual activity. Verify now.", "spam"),
+    ("Special offer for new customers! Get a free trial for our premium service.", "spam"),
+    ("Hi John, let's catch up for coffee tomorrow.", "not spam"),
+    ("Meeting scheduled for Monday at 10 AM. Please confirm attendance.", "not spam"),
+    ("Thank you for your order. Your package will be delivered soon.", "not spam"),
+    ("Here's the report you requested. Let me know if you need changes.", "not spam"),
+    ("Join us for the webinar on AI advancements this Friday!", "not spam"),
+    ("Your flight itinerary has been emailed. Safe travels!", "not spam"),
+    ("Reminder: Your doctor's appointment is scheduled for 3 PM tomorrow.", "not spam"),
+    ("Happy Birthday! Wishing you a fantastic year ahead.", "not spam"),
+    ("Our team meeting is rescheduled to Wednesday. Let me know if that works.", "not spam"),
+    ("Hey, did you check out the new AI tutorial I sent?", "not spam"),
+    ("Your monthly subscription has been renewed successfully.", "not spam"),
+    ("Kindly review the attached contract and sign it before Friday.", "not spam"),
+    ("I’ve attached the latest project updates for review.", "not spam"),
+    ("Congrats on your promotion! Let's celebrate soon.", "not spam"),
+    ("Your payment has been processed successfully.", "not spam"),
+    ("Can you send me the notes from today's meeting?", "not spam"),
+    ("Hope you're doing well. Let’s catch up soon!", "not spam"),
+    ("Welcome to our online community! Excited to have you here.", "not spam"),
+    ("Your application status has been updated. Please check your portal.", "not spam"),
+    ("Invoice #4567 is attached for your review.", "not spam"),
+    ("Don't forget to submit your assignment before midnight.", "not spam"),
+    ("Here's a link to the latest research paper on NLP!", "not spam"),
+]
+
+# Convert to DataFrame
+df = pd.DataFrame(emails, columns=["Email Text", "Label"])
+
+# Save as CSV
+df.to_csv("data.csv", index=False)
+
+print("Dataset 'data.csv' created successfully!")
